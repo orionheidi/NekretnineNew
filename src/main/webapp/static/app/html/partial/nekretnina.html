@@ -1,0 +1,21 @@
+<h1>Nekretnina Save</h1>
+<div ng-controller="nekretninaCtrl">
+	<div>
+		<form class="form">
+				<div>
+					<label for="name">povrsina:</label>
+					<input id="name" class="form-control" ng-model="nekretnina.povrsina"/>
+					<label for="name">adresa:</label>
+					<input id="name" class="form-control" ng-model="nekretnina.adresa"/>
+					<label for="name">cena:</label>
+					<input id="name" class="form-control" ng-model="nekretnina.cena"/>
+					<label for="name">tip nekretnine:</label>
+					<select class="form-control"
+      			ng-options="prepTip(tip) for tip in tipNekretnine track by tip.id"
+      				ng-model="nekretnina.tip">
+  				</select>
+				</div>
+			<button class="btn btn-primary" ng-click="save()">sacuvaj</button>
+		</form>
+	</div>
+</div>
